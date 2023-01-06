@@ -60,3 +60,18 @@ print('Периметр:', a + b + c)
 #print(input().find('ra'))
 #s1 = input().replace('--', '-').replace('--', '-')
 #print(s1)
+a = [[8, 11, 12, 1], [9, 4, 36, -4], [1, 12, 49, 5]]
+print(a[0][-1], a[1][-1], a[2][-1])
+#a_1 = list(map(str, input().split()))
+#b = list(map(str, input().split()))
+#c = list(map(str, input().split()))
+#print(a_1[-1], b[-1], c[-1])
+a = [True, [1, 0, ["True", ["Истина", "Ложь"], "False"]], False]
+print(a[1][2][1][0])
+a = [True, [1, 0, ["True", ["Истина", "Ложь"], "F"]], False]
+print(a[1][2][2])
+#t = [["Скажи-ка", "дядя", "ведь", "не", "даром"],
+    #["Я", "Python", "выучил", "с", "каналом"],
+    #["Балакирев", "что", "раздавал?"]]
+#c = input()
+#print(c in t[0]+t[1]+t[2])
