@@ -30,7 +30,7 @@ a.difference(b)
 a, b, c = map(int, input('Введите сторону треугольника:').split())
 print('Периметр:', a + b + c)
 #a = 7
-#b = -4
+#b = -4P
 #c = 3
 #print(a, b, c, sep=' ')
 #s1, s2 = map(str.strip, input().split())
