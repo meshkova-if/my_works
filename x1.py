@@ -75,3 +75,6 @@ print(a[1][2][2])
     #["Балакирев", "что", "раздавал?"]]
 #c = input()
 #print(c in t[0]+t[1]+t[2])
+from collections import Counter
+# Создаём пустой объект Counter
+c = Counter()
