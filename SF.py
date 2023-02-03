@@ -1,9 +1,14 @@
 import numpy as np
-#b = np.int16(16)
-#print(np.iinfo(b))#Какие минимальное и максимальное числа можно сохранить в 16 бит?
-#c = np.int64()
-#print(np.iinfo(c))
-#n = np.uint64(16)
-#print(np.iinfo(n))
-z, step = np.linspace(-6,20,60, endpoint=True, retstep=True)
-print(step.round(2))
+np.random.seed(2021)
+simple = np.random.rand()
+randoms = np.random.uniform(-150,2021,size=120)
+table = np.random.randint(1,101, size=(3,2))
+even = np.arange(2,17,2)
+mix = even
+np.random.shuffle(mix)
+select = np.random.choice(even, size=3, replace=False)
+triplet = np.random.permutation(select)
+print(triplet)
+simplelist = [19, 242, 14, 152, 142, 1000]
+n = sum(simplelist)/len(simplelist)
+print(n)
