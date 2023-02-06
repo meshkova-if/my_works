@@ -7,6 +7,25 @@ import pandas as pd
 #names=['chlorhexidine', 'cyntomycin', 'afobazol']
 #counts=[15, 18, 7]
 #print(create_medications(names = ['chlorhexidine', 'cyntomycin', 'afobazol'], counts = [26, 18, 7]))
-#def create_companyDF(incomes, expenses, years):
-company_DF = pd.DataFrame([478, 512, 196], [156, 130, 270], columns=[2018, 2019, 2020])
-print(company_DF)
+def create_companyDF(income, expenses, years):
+    df = pd.DataFrame({
+        'Income': income,
+        'Expenses': expenses
+        },
+        index = years
+    )
+    return df
+incomes = [478, 512, 196]
+expenses = [156, 130, 270]
+years = [2018, 2019, 2020]
+
+def get_profit(df, year):
+    if year in df.index:
+        profit = df.loc[year, 'incomes']-df.loc[year,'expenses']
+    else:
+        profit=None
+        return profit
+
+
+print(get_profit(df=incomes,expenses,years))
+
