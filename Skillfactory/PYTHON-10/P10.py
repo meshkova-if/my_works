@@ -208,7 +208,7 @@ def get_time_of_day(time):
 melcitibike_tr['time_of_day'] = melcitibike_tr['starttime'].dt.hour.apply(get_time_of_day)
 a = melcitibike_tr[melcitibike_tr['time_of_day'] == 'day'].shape[0]
 b = melcitibike_tr[melcitibike_tr['time_of_day'] == 'night'].shape[0]
-print(round(a / b))
+#print(round(a / b))
 
     
     
