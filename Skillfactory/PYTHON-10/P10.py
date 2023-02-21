@@ -64,18 +64,18 @@ melb_data = pd.read_csv('data/melb_data.csv', sep=',')
 #print(round(melb_data[(melb_data['Price']<1e6) & ((melb_data['Rooms']>5) | (melb_data['YearBuilt'] > 2015))]['Price'].mean()))
 #print(melb_data[(melb_data['Type'] == 'h') & (melb_data['Price'] < 3000000)]['Regionname'].mode())
 #print(melb_data.head())
-melb_df= melb_data.copy()
-melb_df.head()
-melb_df = melb_df.drop(['index', 'Coordinates'], axis=1)
-melb_df.head()
+#melb_df= melb_data.copy()
+#melb_df.head()
+#melb_df = melb_df.drop(['index', 'Coordinates'], axis=1)
+#melb_df.head()
 #print(melb_df)
-total_rooms = melb_df['Rooms']+melb_df['Bedroom']+melb_df['Bathroom']
+#total_rooms = melb_df['Rooms']+melb_df['Bedroom']+melb_df['Bathroom']
 #print(total_rooms)
-melb_df['MeanRoomsSquare'] = melb_df['BuildingArea']/total_rooms
+#melb_df['MeanRoomsSquare'] = melb_df['BuildingArea']/total_rooms
 #print(melb_df['MeanRoomsSquare'])
-diff_area = melb_df['BuildingArea'] - melb_df['Landsize']
-sum_area = melb_df['BuildingArea'] + melb_df['Landsize']
-melb_df['AreaRatio'] = diff_area/sum_area
+#diff_area = melb_df['BuildingArea'] - melb_df['Landsize']
+#sum_area = melb_df['BuildingArea'] + melb_df['Landsize']
+#melb_df['AreaRatio'] = diff_area/sum_area
 #print(melb_df['AreaRatio'])
 #price_square = melb_df['Price'] **2
 #print(price_square)
