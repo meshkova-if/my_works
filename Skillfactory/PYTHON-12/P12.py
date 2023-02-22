@@ -147,10 +147,11 @@ def get_year_release(arg):
 #melb_data['Date'].dt.tz_localize(None)
 #mask = (date1 <= melb_data['Date']) & (melb_data['Date'] <= date2)
 #n = melb_data[date2].groupby('SellerG')['Price'].sum().sort_values(ascending=True)
-orders = pd.read_csv('data/orders.csv')
-products = pd.read_csv('data/products.csv')
+orders = pd.read_csv('data/orders.csv', sep=',')
+products = pd.read_csv('data/products.csv', sep=',')
 orders.head()
 products.head()
+print(orders)
 
 
 
