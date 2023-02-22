@@ -129,3 +129,30 @@ def get_year_release(arg):
 #print(joined['year_rating'])
 #svod = joined.pivot_table(values='rating', index='year_rating', columns='genres', aggfunc='mean')
 #print(svod['Animation|Children|Mystery'])
+#date1 = joined['date'] ==[2017]
+#date2 = joined['date'] ==[2018]
+#mask = (date1 <= melb_data['Date']) & (melb_data['Date'] <= date2)
+#print(melb_data[mask].groupby('SellerG')['Price'].sum().sort_values(ascending=True))
+#joined['date']= pd.to_datetime(joined['date'], dayfirst=True)
+#joined['dates']= joined['date'].dt.date
+#date1 = joined['dates'] =='2017-05-01'
+#date2 = joined['dates'] =='2017-09-01'
+#n = joined['date1'].groupby('SellerG')['Price']
+#print(joined.columns)
+#print(melb_data.columns)
+#melb_data['Date']= pd.to_datetime(melb_data['Date'])
+#print(melb_data.info())
+#date1 = melb_data['Date'] == '2017-05-01'
+#date2 = melb_data['Date'] == '2017-09-01'
+#melb_data['Date'].dt.tz_localize(None)
+#mask = (date1 <= melb_data['Date']) & (melb_data['Date'] <= date2)
+#n = melb_data[date2].groupby('SellerG')['Price'].sum().sort_values(ascending=True)
+orders = pd.read_csv('data/orders.csv')
+products = pd.read_csv('data/products.csv')
+orders.head()
+products.head()
+
+
+
+
+
