@@ -16,5 +16,5 @@ orders_products['Дата создания'] = pd.to_datetime(orders_products['�
 #print(orders_products[orders_products['Статус']=='Отменён'])
 orders_products['col_pr'] = (orders_products['Количество']*orders_products['Price'])
 #&(orders_products['Оплачен'] == 'Да')
-№print(orders_products[orders_products['Оплачен'] == 'Да'].groupby('ID Покупателя')['col_pr'].sum().sort_values(ascending=False))
+#print(orders_products[orders_products['Оплачен'] == 'Да'].groupby('ID Покупателя')['col_pr'].sum().sort_values(ascending=False))
 
