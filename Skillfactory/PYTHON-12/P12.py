@@ -135,23 +135,16 @@ def get_year_release(arg):
 #print(melb_data[mask].groupby('SellerG')['Price'].sum().sort_values(ascending=True))
 #joined['date']= pd.to_datetime(joined['date'], dayfirst=True)
 #joined['dates']= joined['date'].dt.date
-#date1 = joined['dates'] =='2017-05-01'
-#date2 = joined['dates'] =='2017-09-01'
-#n = joined['date1'].groupby('SellerG')['Price']
-#print(joined.columns)
+
 #print(melb_data.columns)
-#melb_data['Date']= pd.to_datetime(melb_data['Date'])
-#print(melb_data.info())
-#date1 = melb_data['Date'] == '2017-05-01'
-#date2 = melb_data['Date'] == '2017-09-01'
-#melb_data['Date'].dt.tz_localize(None)
+melb_data['Date']= pd.to_datetime(melb_data['Date'])
+date1 = pd.to_datetime('2017-05-01') 
+date2 = pd.to_datetime('2017-09-01')
 #mask = (date1 <= melb_data['Date']) & (melb_data['Date'] <= date2)
-#n = melb_data[date2].groupby('SellerG')['Price'].sum().sort_values(ascending=True)
-orders = pd.read_csv('data/orders.csv', sep=',')
-products = pd.read_csv('data/products.csv', sep=',')
-orders.head()
-products.head()
-print(orders)
+mask = (melb_data['Date']>='2017-05-01')&(melb_data['Date']<='2017-09-01')
+n = melb_data[mask].groupby('SellerG')['Price'].sum().sort_values(ascending=True)
+#print(n)
+
 
 
 
