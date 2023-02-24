@@ -4,7 +4,7 @@ products = pd.read_csv('data/products.csv', sep = ';')
 orders.head()
 products.head()
 #print(products.columns)
-print(orders.columns)
+#print(orders.columns)
 #m = orders.merge(products, how='inner', on=)
 orders_products = orders.merge(
     products, 
@@ -17,4 +17,6 @@ orders_products['Дата создания'] = pd.to_datetime(orders_products['�
 orders_products['col_pr'] = (orders_products['Количество']*orders_products['Price'])
 #&(orders_products['Оплачен'] == 'Да')
 #print(orders_products[orders_products['Оплачен'] == 'Да'].groupby('ID Покупателя')['col_pr'].sum().sort_values(ascending=False))
-
+covid_data = pd.read_csv('data/covid_data.csv')
+covid_data.head()
+print(covid_data)
