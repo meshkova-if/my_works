@@ -40,4 +40,17 @@ covid_df = covid_data.merge(vaccinations_data, how='left', on=['date', 'country'
 covid_df['death_rate'] = covid_df['deaths'] /covid_df['confirmed']*100
 covid_df['recover_rate'] = covid_df['recovered']/covid_df['confirmed']*100
 #print(round(covid_df[covid_df['country'] == 'United States']['death_rate'].max(), 2))
-print(round(covid_df[covid_df['country']=='Russia']['recover_rate'].mean(), 2))
+#print(round(covid_df[covid_df['country']=='Russia']['recover_rate'].mean(), 2))
+grouped_cases = covid_df.groupby('date')['daily_confirmed'].sum()
+grouped_cases.plot(
+    kind='line',
+    figsize=(12, 4),
+    title='Ежедневная заболеваемость во времени',
+    grid = True,
+    lw=3
+)
+import matplotlib.pyplot as plt
+plt.style.use('default')
+fig = plt.figure(figsize=(8,4))
+axes = fig.add_axes([0,0,1,1])
+#print(fig)
